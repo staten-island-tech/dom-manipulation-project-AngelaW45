@@ -1,11 +1,14 @@
 const DOMSelectors = {
-  butten: document.getElementById("btn"),
+  button: document.getElementById("btn"),
   text: document.querySelector("#text"),
-  background: document.getElementById("background"),
+  box: document.getElementById("purple background"),
 };
 
 function backgroundAndText(background, text) {
-  text.innerHTML = "This is now a pink background";
+  background.style.backgroundColor = "pink";
+  text.textContent = "This is now a pink background";
 }
 
-console.log(DOMSelectors);
+DOMSelectors.button.addEventListener("click", function () {
+  backgroundAndText(DOMSelectors.text, DOMSelectors.background);
+});
