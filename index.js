@@ -1,7 +1,7 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   text: document.querySelector("#text"),
-  box: document.getElementById("purple background"),
+  box: document.getElementById("background"),
 };
 
 function backgroundAndText(background, text) {
@@ -10,5 +10,5 @@ function backgroundAndText(background, text) {
 }
 
 DOMSelectors.button.addEventListener("click", function () {
-  backgroundAndText(DOMSelectors.text, DOMSelectors.background);
+  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
 });
