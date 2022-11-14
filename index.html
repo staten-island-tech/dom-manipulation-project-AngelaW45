@@ -4,18 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dom</title>
+    <title>Album Builder</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="background">
-    <p id="text">This is a box</p>
-    <input type="text" id="input" />
-    <button type="button" id="btn">Click Me</button>
-  </div>
 
+    <body>
+    <h1>What Are You Listening To?</h1>
+    <section class="form-parent">
+        <form id="form">
+            <div class="form-inputs">
+                <div class="form-input">
+                    <label for="title">Album Name</label>
+                    <input type="text" id="title" class="text-box" required>
+                </div>
+                <div class="form-input">
+                    <label for="artist">Artist</label>
+                    <input type="text" id="artist" class="text-box" required>
+                </div>
+                <div class="form-input">
+                    <label for="url">Enter Image URL Here</label>
+                    <input type="text" id="url" class="text-box" required>
+                </div>
+            </div>
+                <div class="hero-form-input">
+                <input type="submit" value="Submit" class="btn">
+            </div> 
+        </form>
+    </section>
+    <section class="display" id="display">
+    </section>
     <script src="index.js"></script>
   </body>
+
 </html> 
 
 
