@@ -6,7 +6,7 @@ const DOMSelectors = {
   displaySection: document.getElementById("display"),
 };
 
-DOMSelectors.submit.addEventListener("click", function () {
+DOMSelectors.submit.addEventListener("click", function (event) {
   let Album = document.getElementById("title").value;
   console.log(Album);
 
@@ -16,19 +16,20 @@ DOMSelectors.submit.addEventListener("click", function () {
   let URL = document.getElementById("url").value;
   console.log(URL);
 
-  DOMSelectors.submit.addEventListener("click", function (event) {
-    event.preventDefault();
+  event.preventDefault();
 
   DOMSelectors.displaySection.insertAdjacentHTML(
-    <div class="display-card">
-      <img
-        class="display-img"
-        src="https://www.gannett-cdn.com/presto/2019/08/08/USAT/dc1fe9c6-d585-42c4-9c69-e31cc46e4c94-ABBEY_ROAD.JPG?auto=webp&crop=1481,834,x0,y265&format=pjpg&width=1200"
-      />
-      <h2 class="display-artist">Beatles</h2>
-      <h3 class="display-album">Abbey Road</h3>
+    "beforeend",
+    `<div class="display-card">
+    <h2 class="display-album">${Album}</h2>
+    <h3 class="display-artist">${Artist}</h3>
+      <img class="display-img"
+        src="${URL}
+      >
+      <div>
       <button class="remove btn">Remove Album</button>
-    </div>
+      </div>
+    </div>`
   );
 });
 

@@ -1,10 +1,33 @@
 .form-parent {
 background-color: purple;
-font-size: 30px;
+font-size: 45px;
 padding: 8%;
 text-align: center;
 }
 
+.display-card {
+background-color: blueviolet;
+font-size: 35px;
+text-align: center;
+padding: 5px 5px 20px 5px;
+width: 30vw;
+}
+
+.img {
+width: 29vw;
+
+}
+
+
+.btn {
+font-size: 25px;
+padding: 5px;
+}
+
+.text-box {
+    padding: 5px;
+    font-size: 20px;
+}
 
 /* #container-box {
 background-color: black;
