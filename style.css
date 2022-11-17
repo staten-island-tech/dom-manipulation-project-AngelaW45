@@ -1,33 +1,52 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* Normally 100% is 16px, we want the size to be 10pz, so we do 62.5% */
+}
+
 .form-parent {
 background-color: purple;
-font-size: 45px;
+font-size: 30rem;
 padding: 8%;
 text-align: center;
 }
 
 .display-card {
 background-color: blueviolet;
-font-size: 35px;
+font-size: 6rem;
 text-align: center;
-padding: 5px 5px 20px 5px;
-width: 30vw;
+display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 30vw;
 }
 
 .img {
-width: 29vw;
+    font-size: 6rem;
+    width: 6vw;
 
-}
-
-
-.btn {
-font-size: 25px;
-padding: 5px;
 }
 
 .text-box {
-    padding: 5px;
-    font-size: 20px;
+    padding: 0.5rem;
+    font-size: 2.5rem;
 }
+
+.btn {
+font-size: 2.5rem;
+padding: 0.5rem;
+}
+
+.btnremove {
+    font-size: 1rem;
+}
+
+
 
 /* #container-box {
 background-color: black;

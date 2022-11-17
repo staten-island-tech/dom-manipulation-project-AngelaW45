@@ -1,20 +1,24 @@
 const DOMSelectors = {
-  submit: document.querySelector(".btn"),
+  submitForm: document.querySelector("form"),
   text: document.querySelector("#text"),
   box: document.getElementById("song"),
   input: document.querySelector(`text`),
   displaySection: document.getElementById("display"),
+  Album: document.getElementById("title"),
+  Artist: document.getElementById("artist"),
+  url: document.getElementById("url"),
 };
 
-DOMSelectors.submit.addEventListener("click", function (event) {
-  let Album = document.getElementById("title").value;
-  console.log(Album);
+function clearfields() {
+  DOMSelectors.Album.value = "";
+  DOMSelectors.Artist.value = "";
+  DOMSelectors.url.value = "";
+}
 
-  let Artist = document.getElementById("artist").value;
-  console.log(Artist);
-
-  let URL = document.getElementById("url").value;
-  console.log(URL);
+DOMSelectors.submitForm.addEventListener("submit", function (event) {
+  let Album = DOMSelectors.Album.value;
+  let Artist = DOMSelectors.Artist.value;
+  let url = DOMSelectors.url.value;
 
   event.preventDefault();
 
@@ -25,12 +29,11 @@ DOMSelectors.submit.addEventListener("click", function (event) {
     <h3 class="display-artist">${Artist}</h3>
       <img class="display-img"
         src="${URL}
-      >
-      <div>
+      />
       <button class="remove btn">Remove Album</button>
-      </div>
     </div>`
   );
+  clearfields();
 });
 
 /* DOMSelectors.submit.addEventListener("click", function () {
