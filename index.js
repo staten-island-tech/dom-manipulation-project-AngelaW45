@@ -6,7 +6,7 @@ const DOMSelectors = {
   displaySection: document.getElementById("display"),
   Album: document.getElementById("title"),
   Artist: document.getElementById("artist"),
-  url: document.getElementById("url"),
+  URL: document.getElementById("url"),
 };
 
 function clearfields() {
@@ -18,7 +18,7 @@ function clearfields() {
 DOMSelectors.submitForm.addEventListener("submit", function (event) {
   let Album = DOMSelectors.Album.value;
   let Artist = DOMSelectors.Artist.value;
-  let url = DOMSelectors.url.value;
+  let URL = DOMSelectors.URL.value;
 
   event.preventDefault();
 
@@ -28,9 +28,9 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
     <h2 class="display-album">${Album}</h2>
     <h3 class="display-artist">${Artist}</h3>
       <img class="display-img"
-        src="${URL}
+        src="${URL}"
       />
-      <button class="remove btn">Remove Album</button>
+      <button class="remove-btn">Remove Album</button>
     </div>`
   );
   clearfields();

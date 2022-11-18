@@ -9,32 +9,14 @@ body,
 
 .form-parent {
 background-color: purple;
-font-size: 30rem;
 padding: 8%;
+font-size: 30rem;
 text-align: center;
-}
-
-.display-card {
-background-color: blueviolet;
-font-size: 6rem;
-text-align: center;
-display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 30vw;
-}
-
-.img {
-    font-size: 6rem;
-    width: 6vw;
-
 }
 
 .text-box {
-    padding: 0.5rem;
-    font-size: 2.5rem;
+  padding: 0.5rem;
+  font-size: 2.9rem;
 }
 
 .btn {
@@ -42,8 +24,40 @@ font-size: 2.5rem;
 padding: 0.5rem;
 }
 
-.btnremove {
-    font-size: 1rem;
+.display-album{
+margin: auto;
+font-size: 3.5rem;
+/* padding: 8px 10px 8px 10px; */
+}
+
+.display-artist{
+  margin: auto;
+  font-size: 3.5rem;
+  /* padding: 8px 10px 8px 10px; */
+}
+.display-img{
+  margin: auto;
+  padding: 10px 15px 10px 15px;
+  width: 55rem;
+}
+
+.display-card {
+background-color: blueviolet;
+text-align: center;
+padding: 10px 10px 10px 10px;
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 5rem auto;
+  width: 30vw;
+}
+
+.remove-btn {
+    font-size: 2rem;
+    margin: auto;
+
 }
 
 
