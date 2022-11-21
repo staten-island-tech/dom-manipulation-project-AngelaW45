@@ -12,7 +12,7 @@ const DOMSelectors = {
 function clearfields() {
   DOMSelectors.Album.value = "";
   DOMSelectors.Artist.value = "";
-  DOMSelectors.url.value = "";
+  DOMSelectors.URL.value = "";
 }
 
 DOMSelectors.submitForm.addEventListener("submit", function (event) {
@@ -30,11 +30,24 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
       <img class="display-img"
         src="${URL}"
       />
+      <div>
       <button class="remove-btn">Remove Album</button>
+      </div>
     </div>`
   );
   clearfields();
-});
+
+  let removebtn = document.querySelectorAll("removebtn");
+  console.log (removebtn)
+
+  // use for each to go thropugh all thye romove btns
+}
+
+
+/* function removebtn() {
+  DOMSelectors.displayCard = "";
+}
+ */
 
 /* DOMSelectors.submit.addEventListener("click", function () {
   let input = DOMSelectors.input.value;
