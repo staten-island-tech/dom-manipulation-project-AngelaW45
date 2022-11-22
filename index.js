@@ -37,12 +37,17 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
   );
   clearfields();
 
-  let removebtn = document.querySelectorAll("removebtn");
-  console.log (removebtn)
+let removebtn = document.querySelectorAll(".rmbtn");
+removebtn.forEach((btn) => {
+  btn.addEventListener("click", function (event) => {
+    event.preventDefault();
+    DOMSelectors.displayCard = "";
+    Console.log(event);
+  });
+});
+});
 
-  // use for each to go thropugh all thye romove btns
-}
-
+// use for each to go thropugh all thye romove btns
 
 /* function removebtn() {
   DOMSelectors.displayCard = "";
@@ -65,14 +70,3 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
   background.style.backgroundColor = "pink";
   text.textContent = "This is now a pink background";
 } */
-
-/* DOMSelectors.button.addEventListener("click", function () {
-  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
-}); */
-
-/* const DOMSelectors = {
-  button: document.getElementById("btn"),
-  text: document.querySelector("#text"),
-  box: document.getElementById("song"),
-  input: document.querySelector(`btn`),
-}; */
