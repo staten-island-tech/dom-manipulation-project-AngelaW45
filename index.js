@@ -37,14 +37,20 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
   );
   clearfields();
 
-let removebtn = document.querySelectorAll(".rmbtn");
-removebtn.forEach((btn) => {
-  btn.addEventListener("click", function (event) => {
-    event.preventDefault();
-    DOMSelectors.displayCard = "";
-    Console.log(event);
+  let removebtn = document.querySelectorAll(".removebtn");
+
+  function removeAlbum() {
+    removebtn.displaySection.remove();
+    // removebtn.displaySection.remove();
+    console.log(hello);
+  }
+
+  removebtn.forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      removeAlbum();
+      event.preventDefault();
+    });
   });
-});
 });
 
 // use for each to go thropugh all thye romove btns
