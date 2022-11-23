@@ -30,27 +30,21 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
       <img class="display-img"
         src="${URL}"
       />
-      <div>
+      <br>
       <button class="remove-btn">Remove Album</button>
-      </div>
+      </br>
     </div>`
   );
   clearfields();
 
-  let removebtn = document.querySelectorAll(".removebtn");
-
-  function removeAlbum() {
-    removebtn.displaySection.remove();
-    // removebtn.displaySection.remove();
-    console.log(hello);
-  }
+  let removebtn = document.querySelectorAll(".remove-btn");
 
   removebtn.forEach((btn) => {
     btn.addEventListener("click", function (event) {
-      removeAlbum();
-      event.preventDefault();
+      event.target.parentElement.remove();
     });
   });
+  clearfields();
 });
 
 // use for each to go thropugh all thye romove btns
