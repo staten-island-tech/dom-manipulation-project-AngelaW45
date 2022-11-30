@@ -21,7 +21,9 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
   let URL = DOMSelectors.URL.value;
 
   event.preventDefault();
+});
 
+function card(Album, Artist, URL) {
   DOMSelectors.displaySection.insertAdjacentHTML(
     "beforeend",
     `<div class="display-card">
@@ -35,19 +37,18 @@ DOMSelectors.submitForm.addEventListener("submit", function (event) {
       </br>
     </div>`
   );
-  clearfields();
+}
 
-  let removebtn = document.querySelectorAll(".remove-btn");
+clearfields();
 
-  removebtn.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
-      event.target.parentElement.remove();
-    });
+let removebtn = document.querySelectorAll(".remove-btn");
+
+removebtn.forEach((btn) => {
+  btn.addEventListener("click", function (event) {
+    event.target.parentElement.remove();
   });
-  clearfields();
 });
-
-// use for each to go thropugh all thye romove btns
+clearfields();
 
 /* function removebtn() {
   DOMSelectors.displayCard = "";
